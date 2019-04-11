@@ -7,6 +7,7 @@ public class PlayerMovments : MonoBehaviour
 
     private float horizontalMvmnt;
     private float verticalMvmnt;
+    [SerializeField]
     private float speed;
 
     private Rigidbody2D body;
@@ -15,7 +16,6 @@ public class PlayerMovments : MonoBehaviour
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody2D>();
-        speed = 20f;
     }
 
     // Update is called once per frame
