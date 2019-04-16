@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,8 +24,8 @@ public class DropBomb : MonoBehaviour
     {
         if (dropBomb)
         {
-            float snapx = Mathf.Round(gameObject.transform.position.x);// + 0.5f;
-            float snapy = Mathf.Round(gameObject.transform.position.y);// + 0.5f;
+            float snapx = Mathf.Floor(gameObject.transform.position.x) + 0.5f;
+            float snapy = Mathf.Floor(gameObject.transform.position.y) + 0.5f;
             Instantiate(bombprefab, new Vector2(snapx, snapy), Quaternion.identity);
             dropBomb = false;
         }
