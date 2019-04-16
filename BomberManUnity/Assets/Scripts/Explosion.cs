@@ -32,9 +32,11 @@ public class Explosion : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
-                Debug.Log("Dead");
+                Debug.Log("Death");
+                Destroy(collision.gameObject);
                 break;
             case "Bomb":
+                Debug.Log("Bomb");
                 collision.gameObject.GetComponent<Bomb>().Explode();
                 break;
             default:

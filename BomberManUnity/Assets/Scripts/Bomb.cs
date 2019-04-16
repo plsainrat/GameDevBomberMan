@@ -17,7 +17,7 @@ public class Bomb : MonoBehaviour
     [SerializeField]
     private float bornTime;
 
-    private int radius;
+    public int radius;
 
 
 
@@ -30,7 +30,6 @@ public class Bomb : MonoBehaviour
         coll = gameObject.GetComponent<Collider2D>();
         Invoke("Explode",lifeTime);
         blockLayer = LayerMask.GetMask("Block");
-        radius = 2;
     }
 
     // Update is called once per frame
