@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8544020844726352253}
   - component: {fileID: 8544020844726352252}
-  - component: {fileID: 8544020844726352243}
   - component: {fileID: 8544020844726352255}
+  - component: {fileID: 770878166405056680}
   - component: {fileID: 8544020844726352254}
   - component: {fileID: 8544020844726352242}
+  - component: {fileID: 4553909780792748602}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -83,32 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8544020844726352243
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8544020844726352249}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1}
-  m_EdgeRadius: 0
 --- !u!50 &8544020844726352255
 Rigidbody2D:
   serializedVersion: 4
@@ -130,6 +105,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &770878166405056680
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544020844726352249}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.13, y: 0.2}
+  m_Direction: 0
 --- !u!114 &8544020844726352254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +148,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombprefab: {fileID: 6706134011985213384, guid: d47ea566bac6426439d1cac6f998ae78,
     type: 3}
+  numBombMax: 0
+  radiusExplod: 0
+--- !u!114 &4553909780792748602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544020844726352249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f2ab500ca2a6b448b9498257afd75f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
