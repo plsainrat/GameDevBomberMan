@@ -67,7 +67,7 @@ public class Bomb : MonoBehaviour
            if(hit.collider!=null && hit.collider.gameObject.CompareTag("Destructible"))
             {
                 Destroy(hit.collider.gameObject);
-                Instantiate(prefabExplosion, (Vector2)transform.position + dir*i, Quaternion.identity);
+                Instantiate(prefabExplosion, (Vector2)transform.position + dir*i, Quaternion.identity).GetComponent<Collider2D>().enabled = false;
                 break;
             }
             if(hit.collider == null)
